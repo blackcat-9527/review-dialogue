@@ -1,0 +1,4 @@
+interface:
+  display_name: "Shared Review Dialogue"
+  short_description: "Coordinate author and reviewer through a shared review log"
+  default_prompt: "Use $review-dialogue as the reviewer."
