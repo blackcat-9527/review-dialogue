@@ -4,7 +4,9 @@ A Codex skill for an author and reviewer to exchange evidence-based feedback thr
 
 ## Start a review
 
-With the artifact and workspace established:
+Choose the artifact you want reviewed, such as a report, slide deck, or code project. Both chats need to read and append to the same Markdown log and read the artifact. The author needs to save revisions where the reviewer can open them.
+
+In the reviewer chat, identify the artifact and use this prompt:
 
 ```text
 Use $review-dialogue as the reviewer.
@@ -17,6 +19,8 @@ In the author chat:
 ```text
 Use $review-dialogue with [log path] as the author.
 ```
+
+If the chats run in different workspaces or environments, give each chat a path it can use to open the same log. Artifact paths can be relative to the log directory when both chats see the same folder layout. You can also supply an explicit path mapping. Separate clones or copies need reliable synchronization for each chat to see the other's changes.
 
 Continue either chat with `Continue review` or `繼續審閱`. Chats are resumed by the user; the skill does not automatically send messages or launch another agent.
 
