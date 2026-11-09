@@ -24,6 +24,10 @@ If the chats run in different workspaces or environments, give each chat a path 
 
 Continue either chat with `Continue review` or `繼續審閱`. Chats are resumed by the user; the skill does not automatically send messages or launch another agent.
 
+## Keep review logs private
+
+Save actual review logs in a folder outside Git checkouts that both chats can access. If you need to keep a log in a clone of this repository, put it under the ignored `review-logs/` directory at the repository root. For any custom path inside a checkout, confirm Git ignores it with `git check-ignore -v -- <log-path>` before staging files.
+
 ## Install
 
 Copy `SKILL.md`, `agents/`, and `assets/` into `~/.codex/skills/review-dialogue/`. These are the skill files; this repository contains no project reports or review history.
